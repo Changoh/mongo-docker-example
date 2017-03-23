@@ -10,7 +10,6 @@ function start {
     docker run --name $CONTAINER_NAME \
         -d \
         -e "TZ=Asia/Seoul" \
-	-e ES_JAVA_OPTS="-Xms1g -Xmx1g" \
         -p 27017:27017 \
 	-v ${MONGO_HOME}/data:/data/db \
 	mongo:3.4.2
